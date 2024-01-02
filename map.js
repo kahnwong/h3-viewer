@@ -203,11 +203,19 @@ var app = new Vue({
         document.addEventListener("DOMContentLoaded", () => {
             map = L.map('mapid');
 
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            //     minZoom: 5,
+            //     maxNativeZoom: 19,
+            //     maxZoom: 24,
+            //     attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+            // }).addTo(map);
+            // pointsLayer = L.layerGroup([]).addTo(map);
+
+            L.tileLayer('https://mt1.google.com/vt/lyrs=r&x={x}&y={y}&z={z}', {
                 minZoom: 5,
                 maxNativeZoom: 19,
                 maxZoom: 24,
-                attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+                attribution: 'Copyright Google Maps',
             }).addTo(map);
             pointsLayer = L.layerGroup([]).addTo(map);
 
